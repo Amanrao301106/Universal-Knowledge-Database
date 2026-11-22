@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UKD — Universal Knowledge Database</title>
+  <meta name="description" content="A unified platform to store, organize and explore knowledge.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+<header class="topbar">
+  <a class="brand" href="#home"><span class="brand-mark">U</span><span>UKD<span class="brand-dot">.</span></span></a>
+  <nav id="nav">
+    <a href="#about">About</a><a href="#architecture">Architecture</a><a href="#database">Database</a><a href="#explorer">Explorer</a><a href="#sql-lab">SQL Lab</a>
+  </nav>
+  <a class="nav-cta" href="#explorer">Explore knowledge <span>↗</span></a>
+  <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation">☰</button>
+</header>
+
+<main>
+<section class="hero section" id="home">
+  <div class="hero-copy">
+    <div class="eyebrow"><span class="pulse"></span> DATABASE MANAGEMENT SYSTEM · PROJECT</div>
+    <h1>Knowledge has<br>no <span class="gradient-text">boundaries.</span></h1>
+    <p class="hero-lead">One intelligent place to collect, connect, organize and discover information across every domain.</p>
+    <div class="hero-actions"><a class="btn primary" href="#explorer">Explore the database <span>→</span></a><a class="btn secondary" href="#architecture">View architecture</a></div>
+    <div class="hero-meta"><div class="avatar-stack"><i>⌘</i><i>⌬</i><i>◈</i></div><span>Structured knowledge. Simple discovery.</span></div>
+  </div>
+  <div class="hero-visual">
+    <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+    <div class="core"><div class="core-inner">UKD<span>CORE</span></div></div>
+    <div class="node node-top"><b>AI</b><span>Intelligence</span></div>
+    <div class="node node-right"><b>DB</b><span>Structured data</span></div>
+    <div class="node node-bottom"><b>∞</b><span>Knowledge</span></div>
+    <div class="node node-left"><b>⌕</b><span>Discovery</span></div>
+    <div class="connect-line line-a"></div><div class="connect-line line-b"></div>
+  </div>
+  <div class="hero-bottom"><span>01 / A UNIFIED KNOWLEDGE SPACE</span><span>SCROLL TO EXPLORE ↓</span></div>
+</section>
+
+<section class="stats-strip">
+  <div><strong id="statTotal">—</strong><span>Knowledge records</span></div>
+  <div><strong id="statCategories">—</strong><span>Knowledge categories</span></div>
+  <div><strong id="statSources">—</strong><span>Information sources</span></div>
+  <div><strong>24/7</strong><span>Knowledge access</span></div>
+</section>
+
+<section class="section content-section" id="about">
+  <div class="section-heading"><div><div class="eyebrow">01 — THE CONCEPT</div><h2>What is <span class="gradient-text">UKD?</span></h2></div><p>A centralized knowledge platform designed to make information easier to store, manage, relate and retrieve.</p></div>
+  <div class="about-grid">
+    <article class="feature-card large-card"><div class="card-icon">◈</div><div class="card-kicker">THE BIG IDEA</div><h3>From scattered data<br>to connected knowledge.</h3><p>Information often lives in separate files, systems and databases. UKD brings knowledge into a unified structure, making it easier to search and understand.</p><div class="mini-flow"><span>Sources</span><b>→</b><span>UKD</span><b>→</b><span>Insights</span></div></article>
+    <article class="feature-card"><div class="card-icon">⌗</div><h3>Organized</h3><p>Classify information by topic, source and tags.</p></article>
+    <article class="feature-card"><div class="card-icon">⌕</div><h3>Discoverable</h3><p>Find relevant records using search and filters.</p></article>
+    <article class="feature-card"><div class="card-icon">⛓</div><h3>Connected</h3><p>Build relationships between concepts and domains.</p></article>
+    <article class="feature-card"><div class="card-icon">▣</div><h3>Consistent</h3><p>Use structured tables and constraints to maintain data quality.</p></article>
+  </div>
+</section>
+
+<section class="section architecture-section" id="architecture">
+  <div class="section-heading"><div><div class="eyebrow">02 — SYSTEM DESIGN</div><h2>How the system <span class="gradient-text">works.</span></h2></div><p>A layered architecture separates the user interface, application logic and persistent data storage.</p></div>
+  <div class="architecture">
+    <div class="arch-layer source-layer"><label>01 · INPUT LAYER</label><div class="arch-items"><span>Documents</span><span>Web sources</span><span>User entries</span><span>External APIs</span></div></div>
+    <div class="arch-arrow">↓ <small>collect & validate</small></div>
+    <div class="arch-layer process-layer"><label>02 · APPLICATION LAYER</label><div class="arch-items"><span>Flask / Python</span><span>Validation</span><span>Search & filtering</span><span>Business logic</span></div></div>
+    <div class="arch-arrow">↓ <small>SQL queries</small></div>
+    <div class="arch-layer data-layer"><label>03 · DATABASE LAYER</label><div class="db-cylinder"><b>MySQL</b><span>Knowledge · Categories · Sources</span></div></div>
+    <div class="arch-arrow">↓ <small>retrieve results</small></div>
+    <div class="arch-layer output-layer"><label>04 · OUTPUT LAYER</label><div class="arch-items"><span>Search results</span><span>Knowledge cards</span><span>Statistics</span><span>Insights</span></div></div>
+  </div>
+  <div class="tech-row"><span>BUILT WITH</span><b>HTML5</b><b>CSS3</b><b>JavaScript</b><b>Python Flask</b><b>MySQL</b></div>
+</section>
+
+<section class="section content-section" id="database">
+  <div class="section-heading"><div><div class="eyebrow">03 — DATABASE DESIGN</div><h2>Structured at the <span class="gradient-text">core.</span></h2></div><p>A relational database stores knowledge records and organizes them with categories, attributes and constraints.</p></div>
+  <div class="schema-grid">
+    <div class="schema-card"><div class="schema-head"><span>TABLE 01</span><b>knowledge</b></div><div class="schema-row pk"><span>🔑 id</span><small>INT · PRIMARY KEY</small></div><div class="schema-row"><span>title</span><small>VARCHAR(180)</small></div><div class="schema-row"><span>content</span><small>TEXT</small></div><div class="schema-row"><span>category</span><small>VARCHAR(80)</small></div><div class="schema-row"><span>source</span><small>VARCHAR(180)</small></div><div class="schema-row"><span>tags</span><small>VARCHAR(255)</small></div><div class="schema-row"><span>created_at</span><small>TIMESTAMP</small></div></div>
+    <div class="relation"><span>category</span><div class="relation-line">1 ───────── ∞</div><span>knowledge</span><small>One category can contain many knowledge records.</small></div>
+    <div class="schema-card"><div class="schema-head"><span>TABLE 02</span><b>categories</b></div><div class="schema-row pk"><span>🔑 id</span><small>INT · PRIMARY KEY</small></div><div class="schema-row"><span>name</span><small>VARCHAR(80) · UNIQUE</small></div><div class="schema-row"><span>description</span><small>VARCHAR(255)</small></div><div class="schema-note">Category names group knowledge records into meaningful domains.</div></div>
+  </div>
+  <div class="normalization-note"><span class="note-icon">✓</span><div><b>Database design principles</b><p>Primary keys provide unique identification. Indexes improve lookup speed. Categories are maintained separately to reduce repeated category descriptions and support consistent classification.</p></div></div>
+</section>
+
+<section class="section explorer-section" id="explorer">
+  <div class="section-heading"><div><div class="eyebrow">04 — LIVE DEMONSTRATION</div><h2>Knowledge <span class="gradient-text">Explorer.</span></h2></div><p>Search the sample database, filter by category, and add new knowledge records.</p></div>
+  <div class="explorer-toolbar"><div class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search concepts, topics or keywords..."><kbd>↵</kbd></div><select id="categoryFilter"><option value="">All categories</option><option>Computer Science</option><option>Artificial Intelligence</option><option>Science</option><option>Mathematics</option><option>Healthcare</option><option>History</option><option>Technology</option></select><button class="btn primary" id="addOpen">＋ Add knowledge</button></div>
+  <div class="results-line"><span id="resultCount">Loading records...</span><span class="live-indicator"><i></i> DATABASE SEARCH</span></div>
+  <div id="knowledgeGrid" class="knowledge-grid"><div class="loading-card">Connecting to knowledge database...</div></div>
+  <div id="emptyState" class="empty-state hidden">No matching records. Try another search or add a new entry.</div>
+</section>
+
+<section class="section sql-section" id="sql-lab">
+  <div class="section-heading"><div><div class="eyebrow">05 — DBMS OPERATIONS</div><h2>SQL <span class="gradient-text">playground.</span></h2></div><p>Explore the core SQL operations used to manage data in a relational database.</p></div>
+  <div class="sql-layout">
+    <div class="sql-tabs"><button class="sql-tab active" data-query="select">SELECT</button><button class="sql-tab" data-query="insert">INSERT</button><button class="sql-tab" data-query="update">UPDATE</button><button class="sql-tab" data-query="delete">DELETE</button></div>
+    <div class="sql-editor"><div class="editor-top"><span><i></i><i></i><i></i></span><small>MYSQL · QUERY EXAMPLE</small><button id="copySql">Copy query</button></div><pre><code id="sqlCode"></code></pre><div class="sql-explain" id="sqlExplain"></div></div>
+  </div>
+  <p class="sql-warning">These are educational SQL examples. Run modification queries only on test data and use a WHERE clause to target the intended records.</p>
+</section>
+
+<section class="section benefits-section" id="benefits">
+  <div class="section-heading"><div><div class="eyebrow">06 — REAL-WORLD VALUE</div><h2>One system. <span class="gradient-text">Many possibilities.</span></h2></div><p>A unified knowledge layer can support information discovery across different fields.</p></div>
+  <div class="usecase-grid">
+    <div class="usecase"><span>⌘</span><b>Education</b><p>Organize notes, concepts, learning resources and study material.</p></div>
+    <div class="usecase"><span>✳</span><b>Healthcare</b><p>Structure approved medical references and research information.</p></div>
+    <div class="usecase"><span>⌬</span><b>Research</b><p>Connect papers, findings, authors and related topics.</p></div>
+    <div class="usecase"><span>▤</span><b>Business</b><p>Centralize policies, process documentation and product knowledge.</p></div>
+  </div>
+  <div class="conclusion"><div class="eyebrow">07 — CONCLUSION</div><h2>Make knowledge<br><span class="gradient-text">work together.</span></h2><p>Universal Knowledge Database demonstrates how DBMS concepts—structured storage, relationships, constraints, indexing and SQL operations—can create a useful foundation for unified knowledge management.</p><a href="#home" class="btn secondary">Back to top ↑</a></div>
+</section>
+</main>
+
+<footer><a class="brand" href="#home"><span class="brand-mark">U</span><span>UKD<span class="brand-dot">.</span></span></a><span>UNIVERSAL KNOWLEDGE DATABASE · DBMS PROJECT</span><span>Built with HTML · CSS · JS · Python · MySQL</span></footer>
+
+<div class="modal-backdrop hidden" id="modal">
+  <div class="modal">
+    <div class="modal-head"><div><div class="eyebrow">CONTRIBUTE TO UKD</div><h3>Add knowledge</h3></div><button id="modalClose" class="close-btn">×</button></div>
+    <form id="knowledgeForm">
+      <label>Title<input name="title" required maxlength="180" placeholder="e.g. What is cloud computing?"></label>
+      <label>Category<select name="category" required><option value="">Choose a category</option><option>Computer Science</option><option>Artificial Intelligence</option><option>Science</option><option>Mathematics</option><option>Healthcare</option><option>History</option><option>Technology</option></select></label>
+      <label>Knowledge / Description<textarea name="content" required rows="4" placeholder="Write a clear explanation..."></textarea></label>
+      <label>Source<input name="source" placeholder="Book, website, class notes..."></label>
+      <label>Tags<input name="tags" placeholder="database, SQL, learning"></label>
+      <div class="form-error" id="formError"></div><button class="btn primary full" type="submit">Save knowledge record →</button>
+    </form>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body></html>
