@@ -40,5 +40,4 @@ INSERT INTO knowledge (title, content, category, source, tags) VALUES
  'Computer Science', 'Relational Database Concepts', 'SQL keys constraints'),
 ('What is Data Normalization?',
  'Normalization organizes relational data to reduce redundancy and improve data integrity. Common normal forms include 1NF, 2NF and 3NF.',
- 'Computer Science', 'Database Design', 'normalization 1NF 2NF 3NF')
-ON DUPLICATE KEY UPDATE title = VALUES(title);
+ 'Computer Science', 'Database Design', 'normalization 1NF 2NF 3NF');
